@@ -1,0 +1,26 @@
+---
+const { title = "Paul Harris", description = "Developer · Portfolio" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="wrap header">
+      <a class="brand" href="/">Paul Harris</a>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/pdharris100">GitHub</a>
+        <a href="mailto:you@example.com">Contact</a>
+      </nav>
+    </header>
+    <main class="wrap"><slot /></main>
+    <footer class="wrap footer">© {new Date().getFullYear()} Paul Harris</footer>
+  </body>
+</html>
